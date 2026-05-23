@@ -41,11 +41,6 @@ public class BranchSecuritySearchPlugin implements SolrServiceSearchPlugin {
 
     private static final Logger log = LogManager.getLogger(BranchSecuritySearchPlugin.class);
 
-    /**
-     * Prefix used to look up branch group mappings in dspace.cfg. Full key
-     * format: diracai.branch.group.<branchCode>
-     * Example: diracai.branch.group.college = <UUID>
-     */
     private static final String CONFIG_PREFIX = "diracai.branch.group.";
 
     /**
@@ -61,7 +56,7 @@ public class BranchSecuritySearchPlugin implements SolrServiceSearchPlugin {
     private static final String[] BRANCH_CODES = {
         "college",
         "field",
-        "admin",
+        "administrative",
         "university"
     };
 

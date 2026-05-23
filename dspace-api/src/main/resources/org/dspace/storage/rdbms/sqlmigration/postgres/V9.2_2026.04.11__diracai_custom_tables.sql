@@ -39,30 +39,77 @@ CREATE TABLE IF NOT EXISTS hed_section_type (
 
 -- Administrative Establishment sub-types
 INSERT INTO hed_section_type (branch_code, code, label, group_name, display_order) VALUES
-    ('admin', 'OM',     'Office of Minister',                  'Offices', 1),
-    ('admin', 'OS',     'Office of Secretary',                 'Offices', 2),
-    ('admin', 'OSS',    'Office of Special Secretary',         'Offices', 3),
-    ('admin', 'OAS',    'Office of Additional Secretary',      'Offices', 4),
-    ('admin', 'ACC1',   'Accounts-I',                          'Finance', 5),
-    ('admin', 'ACC2',   'Accounts-II',                         'Finance', 6),
-    ('admin', 'AUD',    'Audit',                               'Finance', 7),
-    ('admin', 'BF',     'Budget & Finance',                    'Finance', 8),
-    ('admin', 'LEGAL',  'Legal',                               'Cells & Sections', 9),
-    ('admin', 'RTI',    'RTI',                                 'Cells & Sections', 10),
-    ('admin', 'CPR',    'Communication & PR',                  'Cells & Sections', 11),
-    ('admin', 'IT',     'IT & ET',                             'Cells & Sections', 12),
-    ('admin', 'NEP',    'NEP Cell',                            'Cells & Sections', 13),
-    ('admin', 'NSS',    'NSS',                                 'Cells & Sections', 14),
-    ('admin', 'NCC',    'NCC',                                 'Cells & Sections', 15),
-    ('admin', 'SCH',    'Scholarship & Loan',                  'Cells & Sections', 16),
-    ('admin', 'TET',    'Teacher Education & Training',        'Cells & Sections', 17),
-    ('admin', 'ENG',    'Engineering Cell',                    'Cells & Sections', 18),
-    ('admin', 'DRY',    'Diary',                               'Cells & Sections', 19),
-    ('admin', 'EIC',    'Edu-Invest Cell',                     'Cells & Sections', 20),
-    ('admin', 'PTC',    'Performance Tracking Cell',           'Cells & Sections', 21),
-    ('admin', 'PR',     'Permission & Recognition',            'Cells & Sections', 22),
-    ('admin', 'SCHEME', 'Scheme',                              'Cells & Sections', 23),
-    ('admin', 'OTHERS', 'Others',                              'Cells & Sections', 24);
+    ('admin', 'OM',        'Office of the Minister',                                                        'Offices', 1),
+    ('admin', 'OS',        'Office of Secretary',                                                           'Offices', 2),
+    ('admin', 'OSS',       'Office of Special Secretary',                                                   'Offices', 3),
+    ('admin', 'OAS',       'Office of the Additional Secretary',                                            'Offices', 4),
+
+    ('admin', 'ACC1',      'Accounts-I Section',                                                            'Finance', 5),
+    ('admin', 'ACC2',      'Accounts-II Section',                                                           'Finance', 6),
+    ('admin', 'AUD',       'Audit Section',                                                                 'Finance', 7),
+    ('admin', 'BF',        'Budget and Finance Section (B&F)',                                              'Finance', 8),
+
+    ('admin', 'CPR',       'Communication and Public Relation Section (C & PR)',                            'Cells & Sections', 9),
+    ('admin', 'DRY',       'Diary Section',                                                                 'Cells & Sections', 10),
+    ('admin', 'EIC',       'Edu-Invest Cell',                                                               'Cells & Sections', 11),
+    ('admin', 'ENG',       'Engineering Cell',                                                              'Cells & Sections', 12),
+
+    ('admin', 'FE',        'Field Establishment Section (FE)',                                              'Establishment', 13),
+
+    ('admin', 'GCENTA',    'Government College Establishment Section (Non-Teaching), GCE(NT)-(A)',         'Establishment', 14),
+    ('admin', 'GCENTB',    'Government College Establishment Section (Non-Teaching), GCE(NT)-(B)',         'Establishment', 15),
+    ('admin', 'GCETA',     'Government College Establishment Section (Teaching), GCE(T)-(A)',              'Establishment', 16),
+    ('admin', 'GCETB',     'Government College Establishment Section (Teaching), GCE(T)-(B)',              'Establishment', 17),
+    ('admin', 'GCNE',      'Government College Non-Establishment Section, GC(NE)',                          'Establishment', 18),
+
+    ('admin', 'GIA1',      'Grant-In-Aid Section (GIA) (I)',                                                'Grant-In-Aid', 19),
+    ('admin', 'GIA2A',     'Grant-in-Aid (GIA) (II)-(A)',                                                   'Grant-In-Aid', 20),
+    ('admin', 'GIA2B',     'Grant-in-Aid (GIA) (II)-(B)',                                                   'Grant-In-Aid', 21),
+    ('admin', 'GIA3',      'Grant-in-Aid (GIA) (III)',                                                      'Grant-In-Aid', 22),
+
+    ('admin', 'IT',        'Information Technology and Emerging Technology Section (IT&ET)',                'Cells & Sections', 23),
+    ('admin', 'ISFC',      'International Student Facilitation Cell',                                       'Cells & Sections', 24),
+    ('admin', 'ISSUE',     'Issue Section',                                                                 'Cells & Sections', 25),
+
+    ('admin', 'LEGALSEC',  'Legal Section',                                                                 'Cells & Sections', 26),
+    ('admin', 'LEGALCELL', 'Legal Cell',                                                                    'Cells & Sections', 27),
+
+    ('admin', 'MC',        'Miscellaneous and Co-ordination Section (M&C)',                                 'Cells & Sections', 28),
+    ('admin', 'NCC',       'National Cadet Corps Section (NCC)',                                            'Cells & Sections', 29),
+    ('admin', 'NEP',       'National Education Policy Cell (NEP)',                                          'Cells & Sections', 30),
+    ('admin', 'NSS',       'National Service Scheme Section (NSS)',                                         'Cells & Sections', 31),
+
+    ('admin', 'NGCENTA',   'Non-Government College Establishment Section (Non-Teaching), NGCE(NT)-(A)',   'Establishment', 32),
+    ('admin', 'NGCENTB',   'Non-Government College Establishment Section (Non-Teaching), NGCE(NT)-(B)',   'Establishment', 33),
+    ('admin', 'NGCET1',    'Non-Government College Establishment Section (Teaching), NGCE(T)-(I)',         'Establishment', 34),
+    ('admin', 'NGCET2',    'Non-Government College Establishment Section (Teaching), NGCE(T)-(II)',        'Establishment', 35),
+    ('admin', 'NGCNE',     'Non-Government College Non-Establishment Section, NGC(NE)',                    'Establishment', 36),
+
+    ('admin', 'OE1',       'Office Establishment (OE) (I)',                                                 'Establishment', 37),
+    ('admin', 'OE2',       'Office Establishment (OE) (II)',                                                'Establishment', 38),
+    ('admin', 'OE3',       'Office Establishment (OE) (III)',                                               'Establishment', 39),
+
+    ('admin', 'PENSION',   'Pension Cell',                                                                  'Cells & Sections', 40),
+    ('admin', 'PR',        'Permission & Recognition Section (PR)',                                         'Cells & Sections', 41),
+    ('admin', 'PTC',       'Policy and Transformation Cell (PTC)',                                          'Cells & Sections', 42),
+    ('admin', 'PMU',       'PMU',                                                                           'Cells & Sections', 43),
+    ('admin', 'RTI',       'Right To Information Section (RTI)',                                            'Cells & Sections', 44),
+    ('admin', 'SCHEME',    'Scheme Section',                                                                'Cells & Sections', 45),
+
+    ('admin', 'SLR',       'Scholarship, Loan & Recovery Section (SL&R)',                                   'Cells & Sections', 46),
+    ('admin', 'SHAKTI',    'Shaktishree Cell',                                                              'Cells & Sections', 47),
+    ('admin', 'TET',       'Teachers’ Education Training, Skilling and Placement (TE,T&S)',                'Cells & Sections', 48),
+
+    ('admin', 'UE',        'University Establishment Section (UE)',                                         'University', 49),
+    ('admin', 'UNE',       'University Non-Establishment Section (UNE)',                                    'University', 50),
+
+    ('admin', 'OSCH2',     'Old Scholarship Section (Campus-II)',                                           'Campus-II', 51),
+    ('admin', 'LSCH2',     'Loan Scholarship (Campus-II)',                                                  'Campus-II', 52),
+    ('admin', 'RRC2',      'Record Room file (Campus-II)',                                                  'Campus-II', 53),
+    ('admin', 'RRC1',      'Record Room file (Campus-I)',                                                   'Campus-I', 54),
+
+    ('admin', 'OTHERS1',   'Others (Campus-I)',                                                             'Others', 55),
+    ('admin', 'OTHERS2',   'Others (Campus-II)',                                                            'Others', 56);
 
 -- Field Establishment sub-types
 INSERT INTO hed_section_type (branch_code, code, label, group_name, has_children, display_order) VALUES
