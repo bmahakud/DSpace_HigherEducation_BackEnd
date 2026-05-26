@@ -20,9 +20,9 @@
     <properties>
         <!--=== GENERAL / DSPACE-API DEPENDENCIES ===-->
         <java.version>17</java.version>
-        <spring.version>6.2.8</spring.version>
-        <spring-boot.version>3.5.3</spring-boot.version>
-        <spring-security.version>6.5.1</spring-security.version>        <!-- sync with version used by spring-boot-->
+        <spring.version>6.2.18</spring.version>
+        <spring-boot.version>3.5.14</spring-boot.version>
+        <spring-security.version>6.5.10</spring-security.version>        <!-- sync with version used by spring-boot-->
         <hibernate.version>6.4.10.Final</hibernate.version>
         <hibernate-validator.version>8.0.2.Final</hibernate-validator.version>
         <postgresql.driver.version>42.7.7</postgresql.driver.version>
@@ -1035,33 +1035,33 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
-                <version>3.5.3</version>
+                <version>3.5.14</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-                <version>3.5.3</version>
+                <version>3.5.14</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-security</artifactId>
-                <version>3.5.3</version>
+                <version>3.5.14</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-cache</artifactId>
-                <version>3.5.3</version>
+                <version>3.5.14</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-json</artifactId>
-                <version>3.5.3</version>
+                <version>3.5.14</version>
             </dependency>
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-thymeleaf</artifactId>
-                <version>3.3.0</version>
+                <version>3.5.14</version>
             </dependency>
             <dependency>
                 <groupId>org.thymeleaf</groupId>
